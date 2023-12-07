@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@1,800&family=Inter:wght@400;700&family=Montserrat:wght@400;700&display=swap');
+
+body {
+    background-color: #9747FF;
+}
+
+.main {
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    text-align: center;
+    color: rgb(61, 0, 77);
+    font-size: 50px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 15px;
+    margin: 50px;
+    padding: 15px;
+}
+
+.container .retangle1,
+.container .retangle2,
+.container .retangle3,
+.container .retangle4,
+.container .retangle5,
+.container .retangle6 {
+    width: 100%;
+    height: 360px;
+    border-radius: 5%;
+    border: solid;
+    border-color: #FFF;
+}
+
+.num {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 70px;
+    margin-top: 10px;
+    color: rgb(255, 255, 255);
+}
+
+.txt {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    margin: 10px;
+    color: rgb(255, 255, 255);
+}
+
+.retangle1 p,
+.retangle2 p,
+.retangle3 p,
+.retangle4 p,
+.retangle5 p,
+.retangle6 p {
+    text-align: center;
+}
+
+/* Медиа-запросы для разных разрешений */
+
+/* Для телефона (максимальная ширина 767px) */
+@media (max-width: 767px) {
+    .container {
+        grid-template-columns: 100%;
+        margin: 20px;
+    }
+}
+
+/* Для планшета (ширина от 768px до 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .container {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+}
+
+/* Для развернутого планшета и выше (ширина от 1024px) */
+@media (min-width: 1024px) {
+    .container {
+        grid-template-columns: repeat(3, minmax(300px, 1fr));
+    }
+}
